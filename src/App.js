@@ -4,7 +4,22 @@ import Header from './components/Header';
 import Section from './components/Section';
 import Footer from './components/Footer';
 
+
 function App() {
+
+  //manau sutvarkiau
+  //tik bootstrapo javascriptas man neveikia ir nezinau kodel :(
+  //bandziau ir su <Helmet /> ir su react-script-tagu ir vistiek nei taip nei taip.
+  //Bandziau ir tiesiog importuoti is node_modules
+  
+  let data = [<Box/>, <Box/>, <Box/>, <Box/>, <Box/>, <Box/>, <Box/>, <Box/>, <Box/>];
+
+  let boxes = data.map( e => {
+    return  (
+         <Box />
+    )
+  });
+
   return (
   <div>
     <Header />
@@ -13,15 +28,7 @@ function App() {
     <div className="album py-5 bg-light">
       <div className="container">
         <div className="row">
-          <Box />
-          <Box />
-          <Box />
-          <Box />
-          <Box />
-          <Box />
-          <Box />
-          <Box />
-          <Box />
+        {boxes}
         </div>
       </div>
     </div>
